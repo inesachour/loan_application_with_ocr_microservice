@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { LoanApplicationModule } from './loan_application/loan_application.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { LoanApplication } from "./loan_application/entity/loan_application.entity";
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: '',
       password: '',
       database: '',
-      entities: [],
+      entities: [LoanApplication],
       synchronize: true,
     }),
   ],
