@@ -11,9 +11,10 @@ import { LoanApplication } from "./loan_application/entity/loan_application.enti
     TypeOrmModule.forRoot({
       type: 'mysql',
       port: 3306,
-      username: '',
+      username: 'root',
       password: '',
-      database: '',
+      database: 'loan_application',
+      host: 'localhost',
       entities: [LoanApplication],
       synchronize: true,
     }),
