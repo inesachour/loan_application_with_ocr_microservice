@@ -1,4 +1,4 @@
-export class CreateLoanApplication {
+export class CreateLoanApplicationDto {
   loan_purpose: string;
   guarantor: boolean;
   first_name: string;

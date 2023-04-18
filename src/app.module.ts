@@ -3,7 +3,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { LoanApplicationModule } from './loan_application/loan_application.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { LoanApplication } from "./loan_application/entity/loan_application.entity";
+import { LoanApplication } from './loan_application/entity/loan_application.entity';
+import { OcrService } from './ocr/ocr.service';
+import { OcrModule } from './ocr/ocr.module';
 
 @Module({
   imports: [
@@ -18,8 +20,9 @@ import { LoanApplication } from "./loan_application/entity/loan_application.enti
       entities: [LoanApplication],
       synchronize: true,
     }),
+    OcrModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, OcrService],
 })
 export class AppModule {}
