@@ -15,6 +15,6 @@ export class LoanApplicationService {
 
   async addLoanApplication(loanApplication: CreateLoanApplicationDto, files) {
     //return await this.loanApplicationRepository.save(loanApplication);
-    this.ocrService.extractTextFromPDF(files);
+    //this.ocrService.extractTextFromPDF(files);
   }
 }
