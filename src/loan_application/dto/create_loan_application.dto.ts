@@ -17,4 +17,5 @@ export class CreateLoanApplicationDto {
   used_for_business: boolean;
   loan_amount: number;
   loan_tenure: number;
+  employer?: string;
 }

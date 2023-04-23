@@ -40,4 +40,6 @@ export class LoanApplication {
   loan_amount: number;
   @Column()
   loan_tenure: number;
+  @Column()
+  employer: string;
 }
